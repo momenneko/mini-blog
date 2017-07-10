@@ -3,7 +3,8 @@ class PostsController < ApplicationController
 
   # GET /posts
   def index
-    @posts = Post.all
+    @posts = Post.all.reverse_order
+    @post = Post.new
   end
 
   # GET /posts/new
@@ -34,6 +35,6 @@ class PostsController < ApplicationController
   private
   def post_params
     # セキュリティの問題により，パラメータの値を明示する必要がある
-    params.require(:post).permit(:title, :text)
+    params.require(:post).permit(:text,:like)
   end
 end

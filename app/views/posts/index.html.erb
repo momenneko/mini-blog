@@ -2,13 +2,21 @@
 
 <hr>
 
+
 <ul>
     <% @posts.each do |post| %>
 	<li>
-	    <p><%= post.title %></p>
-	    <p><%= link_to '詳細', post %></p>
-	    <p><%= post.text %></p>
-	    <p>いいね：<%= post.good_num %>コメント数：<%= post.comments.count%>投稿日時：<%= post.created_at %></p>
+	    <p>
+		<%= post.id %>: 
+		<%= link_to post do %>
+		    <%= post.text %>
+		<% end %>
+	    </p>
+	    <p>
+		いいね: <%= post.like %>｜
+		コメント数: <%= post.comments.count%>｜
+		投稿日時: <%= post.created_at %>
+	    </p>
 	</li>
     <% end %>
 </table>

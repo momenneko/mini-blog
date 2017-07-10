@@ -21,9 +21,8 @@ ActiveRecord::Schema.define(version: 20170707082325) do
   end
 
   create_table "posts", force: :cascade do |t|
-    t.string "title"
     t.text "text"
-    t.integer "good_num", default: 100
+    t.integer "like", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

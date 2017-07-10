@@ -11,17 +11,8 @@
 	</div>
     <% end %>
     <p>
-	<%= f.label :title, "タイトル" %><br>
-	<%= f.text_field :title %>
-    </p>
-    
-    <p>
-	<%= f.label :text, "内容" %><br>
-	<%= f.text_area :text, cols: 60, rows: 8 %>
-    </p>
-    
-    <p>
-	<%= f.submit %>
+	<%= f.text_field :text, placeholder: "投稿しよう" , size: 80 %>
+	<%= f.submit "投稿する" %>
     </p>
 <% end %>
 

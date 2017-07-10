@@ -1,11 +1,15 @@
 # モデル設計
 ## ポスト
 - id : Integer
-- content : text
-- good_num : Integer
-- date : 
+- body : text
+- like : Integer
 
 ## コメント
 - id :Integer
 - content : text
-- date :
+
+# TODO
+- いいねを実装する
+- CSS
+- 余分なコメント欄ができる(コメントnull？)
+- indexにnew post formをつくる

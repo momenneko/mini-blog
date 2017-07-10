@@ -1,6 +1,6 @@
 <%= form_for( [@post, @post.comments.build] ) do |f| %>
     <p>
-	<%= f.text_area :body , cols:60, rows: 1 %>
+	<%= f.text_field :body, placeholder: "コメントしよう" , size: 80 %>
 	<%= f.submit "コメントする" %>
     </p>
 <% end %>
