@@ -8,7 +8,7 @@
 	    <p><%= post.title %></p>
 	    <p><%= link_to '詳細', post %></p>
 	    <p><%= post.text %></p>
-	    <p>いいね：<%= post.good_num %>コメント数：投稿日時：<%= post.created_at %></p>
+	    <p>いいね：<%= post.good_num %>コメント数：<%= post.comments.count%>投稿日時：<%= post.created_at %></p>
 	</li>
     <% end %>
 </table>

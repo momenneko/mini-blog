@@ -2,16 +2,15 @@
 <%= link_to '戻る', posts_path %>
 
 <p>
-    <strong>タイトル：</strong>
-    <%= @post.title %>
+    <span>投稿日時：<%= @post.created_at %></span>
 </p>
 <p>
-    <strong>内容：</strong>
     <%= @post.text %>
 </p>
 
 <!-- コメント投稿欄 -->
 <%= render "comments/form" %>
+<hr>
 <!-- コメント一覧表示 -->
 <%= render @post.comments %>
 
