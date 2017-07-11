@@ -4,14 +4,14 @@ class PostsController < ApplicationController
   # GET /posts
   def index
     @posts = Post.all.reverse_order
+    # 定義しておかないとif @post.errors.anyで例外が発生する
     @post = Post.new
   end
 
   # GET /posts/new
-  def new
-    # 定義しておかないとnew.html.erbが表示されるときにnilになって例外が発生する
-    @post = Post.new
-  end
+  #def new
+  #  @post = Post.new
+  #end
 
   # POST /posts
   def create
@@ -22,7 +22,8 @@ class PostsController < ApplicationController
       redirect_to @post
     else
       # 無効なpost
-      render :new, status: :unprocessable_entity
+      @posts = Post.all.reverse_order
+      render :index, status: :unprocessable_entity
     end
   end
 

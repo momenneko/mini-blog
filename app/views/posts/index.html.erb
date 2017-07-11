@@ -1,5 +1,22 @@
 <h1>Mini blog</h1>
 
+<%= form_for :post, url: posts_path do |f| %>
+    <% if @post.errors.any? %>
+	<div id="error_explanation">
+	    <h2><%= @post.errors.count %>件のエラーが発生したため保存ができませんでした．</h2>
+	    <ul>
+		<% @post.errors.full_messages.each do |msg|  %>
+		    <li><%= msg %></li>
+		<% end %>
+	    </ul>
+	</div>
+    <% end %>
+    <p>
+	<%= f.text_field :text, placeholder: "投稿しよう" , size: 80 %>
+	<%= f.submit "投稿する" %>
+    </p>
+<% end %>
+
 <hr>
 
 
