@@ -1,8 +1,10 @@
 
-<%= link_to '戻る', posts_path %>
+<%= link_to '戻る', root_path %>
 
 <p>
     <span>投稿日時：<%= @post.created_at %></span>
+    ｜<%= link_to 'いいね', root_path %>: <%= @post.like %>
+    <!-- いいねのリンクをあとで直す -->
 </p>
 <p>
     <%= @post.text %>
@@ -11,6 +13,8 @@
 <!-- コメント投稿欄 -->
 <%= render "comments/form" %>
 <hr>
+
 <!-- コメント一覧表示 -->
 <%= render @post.comments %>
+
 
