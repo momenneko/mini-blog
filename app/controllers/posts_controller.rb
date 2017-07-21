@@ -27,10 +27,20 @@ class PostsController < ApplicationController
     end
   end
 
-
   # GET /posts/:id
   def show
     @post = Post.find(params[:id])
+  end
+
+  # POST /posts/:id/like
+  def like
+    @post = Post.find(params[:id])
+    @post.increment(:like, 1)
+    if @post.save
+      redirect_to @post
+    else
+      render :index
+    end
   end
 
   private

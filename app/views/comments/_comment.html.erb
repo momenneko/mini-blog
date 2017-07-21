@@ -1,3 +1,6 @@
-<p>
-    <%=  comment.body %> | <span>投稿日時：<%= comment.created_at %></span>
-</p>
+<%= comments.each do |comment| %>
+    <% if comment.id != nil then %>
+	<%=  comment.body %> | <span>投稿日時: <%= comment.created_at %></span>
+	<br>
+    <% end %>
+<% end %>

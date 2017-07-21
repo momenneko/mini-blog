@@ -3,8 +3,7 @@
 
 <p>
     <span>投稿日時：<%= @post.created_at %></span>
-    ｜<%= link_to 'いいね', root_path %>: <%= @post.like %>
-    <!-- いいねのリンクをあとで直す -->
+    ｜<%= link_to 'いいね', like_post_path %>: <%= @post.like %>
 </p>
 <p>
     <%= @post.text %>
@@ -15,6 +14,5 @@
 <hr>
 
 <!-- コメント一覧表示 -->
-<%= render @post.comments %>
-
+<%= render partial:  "comments/comment" , locals: { comments: @post.comments } %>
 

@@ -29,7 +29,8 @@
 		<% end %>
 	    </p>
 	    <p>
-		いいね: <%= post.like %>｜
+		<%= link_to "いいね", like_post_path(post) %>
+		: <%= post.like %>｜
 		コメント数: <%= post.comments.count%>｜
 		投稿日時: <%= post.created_at %>
 	    </p>
