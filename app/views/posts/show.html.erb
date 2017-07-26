@@ -8,7 +8,7 @@
     <p>
 	<%= @post.id %>: 
 	<span class="post-date">投稿日時: <%= @post.created_at %></span>
-	｜<span class="like><%= link_to 'いいね', like_post_path %>: <%= @post.like %></span>
+	｜<span class="like"><%= link_to 'いいね', like_post_path %>: <%= @post.like %></span>
     </p>
     <p>
 	<span class="text-body"><%= @post.text %></span>
