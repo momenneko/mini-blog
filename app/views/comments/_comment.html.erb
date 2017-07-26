@@ -1,5 +1,5 @@
-<%= comments.each do |comment| %>
-    <% if comment.id != nil then %>
+<% comments.each do |comment| %>
+    <% if comment.id.present? %>
 	<%=  comment.body %> | <span>投稿日時: <%= comment.created_at %></span>
 	<br>
     <% end %>
