@@ -1,6 +1,8 @@
 <% comments.each do |comment| %>
     <% if comment.id.present? %>
-	<%=  comment.body %> | <span>投稿日時: <%= comment.created_at %></span>
-	<br>
+	<p class="reply">
+	    <span class="text-body"><%= comment.body %></span> 
+	    | <span class="post-date">投稿日時: <%= comment.created_at %></span>
+	</p>
     <% end %>
 <% end %>

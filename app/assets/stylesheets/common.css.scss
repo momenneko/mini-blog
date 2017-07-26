@@ -1,0 +1,57 @@
+/*-------------------
+    共通
+--------------------*/
+body {
+  padding: 16px;
+  margin: 0;
+}
+
+/* 投稿時間 */
+.post-date {
+  color: #999;
+}
+
+/* 本文 */
+.text-body {
+  font-weight: bold;
+}
+
+/*-------------------
+    index.html.erb
+--------------------*/
+
+.blogs {
+  list-style: none;
+  margin: 0;
+  padding: 16px;
+}
+
+.blog {
+  padding: 10px 0;
+  border-bottom: solid 1px #eee;
+}
+
+.blog-title {
+  margin: 0;
+}
+
+.meta {
+  margin: 0;
+}
+
+/*-------------------
+    show.html.erb
+--------------------*/
+
+.blog-detail {
+  border-top: solid 1px #eee;
+  padding-left: 16px;	    
+}
+
+.reply {
+  border-bottom: solid 1px #eee;
+  padding: 16px;
+  margin: 0;
+}
+
+

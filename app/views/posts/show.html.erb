@@ -1,13 +1,19 @@
-
-<%= link_to '戻る', root_path %>
+<h1>Mini blog</h1>
 
 <p>
-    <span>投稿日時：<%= @post.created_at %></span>
-    ｜<%= link_to 'いいね', like_post_path %>: <%= @post.like %>
+    <%= link_to '戻る', root_path %>
 </p>
-<p>
-    <%= @post.text %>
-</p>
+
+<div class="blog-detail">
+    <p>
+	<%= @post.id %>: 
+	<span class="post-date">投稿日時: <%= @post.created_at %></span>
+	｜<span class="like><%= link_to 'いいね', like_post_path %>: <%= @post.like %></span>
+    </p>
+    <p>
+	<span class="text-body"><%= @post.text %></span>
+    </p>
+</div>
 
 <!-- コメント投稿欄 -->
 <%= render "comments/form" %>

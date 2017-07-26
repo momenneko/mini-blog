@@ -19,20 +19,24 @@
 
 <hr>
 
-<ul>
+<ul class="blogs">
     <% @posts.each do |post| %>
-	<li>
-	    <p>
+	<li class="blog">
+	    <p class="blog-title">
 		<%= post.id %>: 
-		<%= link_to post do %>
-		    <%= post.text %>
-		<% end %>
+		<span class="text-body">
+		    <%= link_to post do %>
+			<%= post.text %>
+		    <% end %>
+		</span>
 	    </p>
-	    <p>
-		<%= link_to "いいね", like_post_path(post) %>
-		: <%= post.like %>｜
-		コメント数: <%= post.comments.count%>｜
-		投稿日時: <%= post.created_at %>
+	    <p class="meta">
+		<span class="like">
+		    <%= link_to "いいね", like_post_path(post) %>
+		    : <%= post.like %>
+		</span>
+		| <span class="comment">コメント数: <%= post.comments.count%></span> 
+		| <span class="post-date">投稿日時: <%= post.created_at %></span>
 	    </p>
 	</li>
     <% end %>
