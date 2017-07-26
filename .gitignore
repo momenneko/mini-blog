@@ -22,4 +22,6 @@
 
 .byebug_history
 
-*.md~
+*.md
+
+*~
