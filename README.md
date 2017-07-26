@@ -1,4 +1,3 @@
-# Mini Blog
-開発途中です
-
+# Mini blog
+## デモ
 https://momen-mini-blog.herokuapp.com/
